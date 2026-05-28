@@ -149,14 +149,8 @@ Quality: max_tokens = 200, max_response_sentences = 3, temperature = 0.6
 - If you are looking for the v11.4 files, there is a specific, setup-install and run-mantella, batches, that are separate to the launcher, the latest versions of those are the files I intended for Mantella team to incorporate into Mantella Mod, as I could not push batches to main...which explains why so many programs on github dont have simple batches to take care of basic issues for windows users.  
 
 # Development
-1. Need to update the prompts to incorporate the new chat options brought in by v12.
-1. All features need double checking. 
-2. Clean up redundancy and optimize, and re-test (scripts are large).
-3. Now have skyrim again, and will be able to test/auto-optimize the character sheets based on context for, skyrim and fallout.
-4. Update relevant media. Character sheet must be backed up  "gamename_characters.bak", and then backup must be used to dynamically in relevance to the context size chosen, be filtered to contain, 2048 = 1 sentences, 4096 = 2 sentences, 8192 = 4 sentences, context lengths should be either, 2048, 4096, 8192, process the gamename_characters.csv according to the current context settings for context, and over-write any existing csv file. It would schedule the character details to be processed, upon the user selecting, `B` or `X`. 
-- There is also work on Llama-Legacy-Serve, this will be able hopefully to merge with Mantella-Local-Launcher, `https://github.com/wiseman-timelord/Llama-Legacy-Serve`.
-- Idea: could also open in a new window, and then the window for the launcher could be data visualization through libraries designed for that, relating to ollama/lm studio interference? (or would this be too many windows?
-
+- Project restart, updating local launcher to become Mantalla-Local, this will be a Llama.cpp built-in streamlined/enhanced version, specific to Qwen 3 variants in GGUF, though other models may be added later, but not newer than Qwen 3 level/dated models (because otherwise this requires compiling the wheel, and other complication). 
+1. For now the plan is to make a custom Mantella Experience tuned to local models, with streamlined install/operation, that can be used with a NG compilation I am working on for `MWO6: Mantella Wasteland Operator`, with pre-configuration via the mantella v0.14 pre-configuration popup GUI, this should be configurable via option ion the batch menu.
 
 ## Disclaimer
 This software is subject to the terms in License.Txt, covering usage, distribution, and modifications. For full details on your rights and obligations, refer to License.Txt.
