@@ -1,16 +1,6 @@
 # Mantella-Local-Launcher for [Mantella](https://github.com/art-from-the-machine/Mantella/releases)
-Status: Under Development, Today release, and mods back on nexus, one is hoping....
-- Patching up some unforseen differences between v11.4 and v12. 
-- Re-Structuring of script, sorting out sections into themes of code is important for large scripts. 
-- Optimization through intellgent code and merging functions, possibly involving additional global for function program pre-configuration.
-- Logic and sanity checks, general checkovers of code.
-- Some globals/Variables were made to have safer names. 
-- Has adapted Fallout 4 Runner-esque code as shown here, text will be refined...
-```
-Detected Game Already Running!
-Is this a, Redundant Process or Running Game?
-Selection; Close Game Processes = C, Use Running Game = G: 
-```
+Status: ALPHA
+- Remaking for `Mantella 0.14`, it will be dropin/replacement scripts, for running 100% with llama.cpp, that will be installed as well as mantella requirements in a `.\venv.`, instead of installing python libraries globally. It will additionally be programmed for Windows 10 and Python 3.12. Due to advancement in AI, its likely this will also be a stripping down of mantella features, ensuring more optimized operation. Likely this will be made to work with specifically Qwen 3 level llama.cpp gguf models, because otherwise the wheel would require compiling for newer models. The smaller qwen 3 models being, more than capable of the task and faster than the newer 3.5/3.6. 
 
 ### Description
 - a Windows Installer/Optimizer/Launcher for Mantella for, Fallout 4/Vr and Skyrim Se/Ae/Vr, specifically only for local models on Windows through, Ollama or LM Studio. Mantella was optimized for 8K on GPT, so, Mantella-Launcher instead optimizes Mantella for Local Models. The script facilitates pre-launch, configuration management and optimization, launches, xVASynth and your chosen game, if they are not already running, then it launches Mantella, by making use of the settings already present in `config.ini`, so you do still need to configure that first. Mantella-Launcher also performs various tasks such as, cleaning configuration files and optimizing the mantella prompts. The Batch file manages the, communication between and launching, of the relevant programs/scripts, while the Python component of the script handles the heavy work, and displays an interactive menu for user selection of game and optimization options. 
