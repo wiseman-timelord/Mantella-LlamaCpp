@@ -150,7 +150,9 @@ Quality: max_tokens = 200, max_response_sentences = 3, temperature = 0.6
 
 # Development
 - Project restart, updating local launcher to become Mantalla-Local, this will be a Llama.cpp built-in streamlined/enhanced version, specific to Qwen 3 variants in GGUF, though other models may be added later, but not newer than Qwen 3 level/dated models (because otherwise this requires compiling the wheel, and other complication). 
-1. For now the plan is to make a custom Mantella Experience tuned to local models, with streamlined install/operation, that can be used with a NG compilation I am working on for `MWO6: Mantella Wasteland Operator`, with pre-configuration via the mantella v0.14 pre-configuration popup GUI, this should be configurable via option ion the batch menu.
+- Skyrim does not include an equivalent to "FO4_Voice_folder_XVASynth_matches.csv", so the project will not be supporting Skyrim, this project will be for Fallout4NG_984 ONLY ONLY. `FO4_Voice_folder_XVASynth_matches.csv` will be used in the project in order to enumerate which accent to use with CorquiTTS. This will be highly inaccurate to begin with, but later be improved through web research into accent/unique voice types in fallout 4, and including some kind of lookup table, in order to have something similar to the original. While this is not optimal, it will  greatly simplify the installation of tts to just install alongside the python requirements. ???
+- For now the plan is to make a custom Mantella Experience tuned to local models, with streamlined install/operation, that can be used with a NG compilation I am working on for `MWO6: Mantella Wasteland Operator`, with pre-configuration via the mantella v0.14 pre-configuration popup GUI, this should be configurable via option ion the batch menu.
+
 
 ## Disclaimer
 This software is subject to the terms in License.Txt, covering usage, distribution, and modifications. For full details on your rights and obligations, refer to License.Txt.
