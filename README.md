@@ -1,19 +1,17 @@
-# Mantella-Local-Launcher for [Mantella](https://github.com/art-from-the-machine/Mantella/releases)
-Status: ALPHA
-- Remaking for `Mantella 0.14`, it will be dropin/replacement scripts, for running 100% with llama.cpp, that will be installed as well as mantella requirements in a `.\venv.`, instead of installing python libraries globally. It will additionally be programmed for Windows 10 and Python 3.12. Due to advancement in AI, its likely this will also be a stripping down of mantella features, ensuring more optimized operation. Likely this will be made to work with specifically Qwen 3 level llama.cpp gguf models, because otherwise the wheel would require compiling for newer models. The smaller qwen 3 models being, more than capable of the task and faster than the newer 3.5/3.6. 
+# Mantella-Lo cal for [Mantella](https://github.com/art-from-the-machine/Mantella/releases) v0.14
+Status: ALPHA 
+- Remaking for `Mantella 0.14`. (older versions exist in tags for earlier versions of mantella)
 
-### Description
-- a Windows Installer/Optimizer/Launcher for Mantella for, Fallout 4/Vr and Skyrim Se/Ae/Vr, specifically only for local models on Windows through, Ollama or LM Studio. Mantella was optimized for 8K on GPT, so, Mantella-Launcher instead optimizes Mantella for Local Models. The script facilitates pre-launch, configuration management and optimization, launches, xVASynth and your chosen game, if they are not already running, then it launches Mantella, by making use of the settings already present in `config.ini`, so you do still need to configure that first. Mantella-Launcher also performs various tasks such as, cleaning configuration files and optimizing the mantella prompts. The Batch file manages the, communication between and launching, of the relevant programs/scripts, while the Python component of the script handles the heavy work, and displays an interactive menu for user selection of game and optimization options. 
+### Descriptioon
+**Mantella-LocalLlm v0.14.x** is a drop-in augmentation of Mantella v0.14, targeting Fallout 4 only, with local-only LLM and TTS — no cloud APIs, no external model servers required.
 
 ### Features
-- **Batch Launcher for Automation**: Automates and runs xVASynth and Mantella with admin privileges.
-- **Optimized Configuration Management**: Streamlines `config.ini` prompts and removes non-functional options.
-- **Interactive Python Script**: Cleans configuration files and offers an interactive menu for game and preset choices.
-- **Automatic Execution and Exit Handling**: If not already running, then runs, Fallout 4 and/or xVASynth, and then continues to Mantella for smooth operation.
-- **LM Studio / Ollama Support **: Switch models to similar one with different name, and it is handled by the launcher in `config.ini`.
-- **Auto-Optimize Prompts**: Prompts are upgraded/streamlined, character sheets will be optimized based on context, but that part is still being worked on.
-- **Auto-Environment Selection**: Code enables python location to be found, and correct version of python to be used. 
-- **Persistent Settings**: The scripts create/uses, `.\data\persistence.txt` and `config.ini`, your settings are saved.
+- **LLM**: Replaced cloud/Ollama/LM Studio dependency with `llama-server.exe` (Vulkan binary), launched automatically as a subprocess. Any Qwen3-era GGUF model is loaded directly; Mantella's existing OpenAI-compatible client talks to it at `127.0.0.1:8080/v1` unchanged.
+- **TTS**: Replaced xVASynth/Piper/XTTS with Kokoro TTS (~326 MB model, ~10 distinct English voices). FO4 voice types are mapped to Kokoro speaker IDs via a generated CSV. Two new files added to `src/tts/`: `kokoro_tts.py` and entries in the modified `tts_definitions.py` / `tts_factory.py`.
+- **Launcher**: Replaces the old batch+Python launcher with `Mantella-LocalLlm.bat` and `src/local_inference.py` — an interactive menu for GGUF model selection, context size, CPU thread count, Vulkan GPU layer offload, and default voice selection.
+- **Installer**: New `installer.py` handles venv creation, PyTorch CPU, Kokoro, llama-server download, and voice mapping CSV generation in one step.
+- **Skyrim**: Not supported in this variant (Fallout 4 only).
+- **Unchanged**: All Mantella core logic — HTTP server, conversation flow, STT, memory/summaries, actions, character CSV data, Gradio config UI — untouched.
 
 ### Preview
 - The `Pre-Launch Configuration` options of `Mantella-Launcher.Bat`...
