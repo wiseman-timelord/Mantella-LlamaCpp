@@ -41,6 +41,18 @@ Quality: max_tokens = 200, max_response_sentences = 3, temperature = 0.6
 - Mantealla-Local v0.14+ has GPU selection, so if you have multiple GPUs ensure to correctly configure your second GPU (if thats optimal) in the configuration.
 - Mods like PhyOp performance texture pack, they will allow one to reduce texture memory footprint, enabling loading of models to GPU larger VRAM spaces on single card.
 
+### Structure
+```
+.\Mantella-LocalLlm.bat - Batch launcher 
+.\main.py - Replacement entry point 
+.\installer.py - Installer 
+.\requirements.txt - Replacement requirements 
+.\src\local_inference.py - Interactive launcher menu 
+.\src\tts/kokoro_tts.py - New TTS backend 
+.\src\tts\tts_definitions.py - Modified (adds KOKORO enum) 
+.\src\tts\tts_factory.py - Modified (registers KokoroTTS) 
+```
+
 # Development
 - Project restart, updating local launcher to become Mantalla-Local, this will be a Llama.cpp built-in streamlined/enhanced version, specific to Qwen 3 variants in GGUF, though other models may be added later, but not newer than Qwen 3 level/dated models (because otherwise this requires compiling the wheel, and other complication). 
 - FO4_Voice_folder_XVASynth_matches.csv`, but later be improved through web research into accent/unique voice types in fallout 4, and including some kind of lookup table, in order to have something similar to the original. While this is not optimal, it will  greatly simplify the installation of tts to just install alongside the python requirements. ???
