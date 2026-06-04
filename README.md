@@ -19,7 +19,7 @@ Status: ALPHA
     T.B.A.
 ```
 
-## Requirements
+### Requirements
 - **Powerful Computer**: Running Fallout 4 and interference on models can be intensive.
 - **Operating System**: T.B.A. 
 - **Python Environment**: T.B.A. - It will use a venv.
@@ -30,7 +30,7 @@ Status: ALPHA
 1. Download the most recent version of [Mantella-Local](https://github.com/wiseman-timelord/Mantella-Local-Launcher/releases), and drag the, file(S) and folder(s), from the zip into the main Mantella folder.
 - Under Construction
   
-## Notes
+### Notes
 - all options for Optimization are shown...
 ```
 Default: max_tokens = 250, max_response_sentences = 999, temperature = 1
@@ -53,10 +53,10 @@ Quality: max_tokens = 200, max_response_sentences = 3, temperature = 0.6
 .\src\tts\tts_factory.py - Modified (registers KokoroTTS) 
 ```
 
-# Development
+### Development
 - Project restart, updating local launcher to become Mantalla-Local, this will be a Llama.cpp built-in streamlined/enhanced version, specific to Qwen 3 variants in GGUF, though other models may be added later, but not newer than Qwen 3 level/dated models (because otherwise this requires compiling the wheel, and other complication). 
 - FO4_Voice_folder_XVASynth_matches.csv`, but later be improved through web research into accent/unique voice types in fallout 4, and including some kind of lookup table, in order to have something similar to the original. While this is not optimal, it will  greatly simplify the installation of tts to just install alongside the python requirements. ???
 - For now the plan is to make a custom Mantella Experience tuned to local models, with streamlined install/operation, that can be used with a NG compilation I am working on for `MWO6: Mantella Wasteland Operator`, with pre-configuration via the mantella v0.14 pre-configuration popup GUI, this should be configurable via option ion the batch menu.
 
-## Disclaimer
+### Disclaimer
 This software is subject to the terms in License.Txt, covering usage, distribution, and modifications. For full details on your rights and obligations, refer to License.Txt.
