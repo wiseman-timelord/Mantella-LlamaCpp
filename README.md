@@ -1,14 +1,14 @@
-# Mantella-Local for [Mantella](https://github.com/art-from-the-machine/Mantella/releases) v0.14
+# Mantella-LocalLlm for [Mantella](https://github.com/art-from-the-machine/Mantella/releases) v0.14
 Status: ALPHA 
 - Remaking for `Mantella 0.14`. (older versions exist in tags for earlier versions of mantella)
 
 ### Descriptioon
-**Mantella-LocalLlm v0.14.x** is a drop-in augmentation of Mantella v0.14, targeting Fallout 4 only, with local-only LLM and TTS — no cloud APIs, no external model servers required. While older versions exist in the tags, that are more true to mantella, the version for v0.14 will be highly experimental, where the voices are done compoletely differently, and may not sound much like the original. The concept is to enable a simpler version of TTS, enabling requirement of only, Mantella mod AND Mantella v0.14 and then dropping in the scripts from Manatella-Local. So no requirements for XVASynth, Model Server, etc, instead we are using Kokoro, which will also result in much faster speech generation, and Llama.Cpp for integrated model handling.
+**Mantella-LocalLlmLlm v0.14.x** is a drop-in augmentation of Mantella v0.14, targeting Fallout 4 only, with local-only LLM and TTS — no cloud APIs, no external model servers required. While older versions exist in the tags, that are more true to mantella, the version for v0.14 will be highly experimental, where the voices are done compoletely differently, and may not sound much like the original. The concept is to enable a simpler version of TTS, enabling requirement of only, Mantella mod AND Mantella v0.14 and then dropping in the scripts from Manatella-Local. So no requirements for XVASynth, Model Server, etc, instead we are using Kokoro, which will also result in much faster speech generation, and Llama.Cpp for integrated model handling.
 
 ### Features
 - **LLM**: Replaced cloud/Ollama/LM Studio dependency with `llama-server.exe` (Vulkan binary), launched automatically as a subprocess. Any Qwen3-era GGUF model is loaded directly; Mantella's existing OpenAI-compatible client talks to it at `127.0.0.1:8080/v1` unchanged.
 - **TTS**: Replaced xVASynth/Piper/XTTS with Kokoro TTS (~326 MB model, ~10 distinct English voices). FO4 voice types are mapped to Kokoro speaker IDs via a generated CSV. Two new files added to `src/tts/`: `kokoro_tts.py` and entries in the modified `tts_definitions.py` / `tts_factory.py`.
-- **Launcher**: Replaces the old batch+Python launcher with `Mantella-LocalLlm.bat` and `src/local_inference.py` — an interactive menu for GGUF model selection, context size, CPU thread count, Vulkan GPU layer offload, and default voice selection.
+- **Launcher**: Replaces the old batch+Python launcher with `Mantella-LocalLlmLlm.bat` and `src/local_inference.py` — an interactive menu for GGUF model selection, context size, CPU thread count, Vulkan GPU layer offload, and default voice selection.
 - **Installer**: New `installer.py` handles venv creation, PyTorch CPU, Kokoro, llama-server download, and voice mapping CSV generation in one step.
 - **Skyrim**: Not supported in this variant (Fallout 4 only).
 - **Unchanged**: All Mantella core logic — HTTP server, conversation flow, STT, memory/summaries, actions, character CSV data, Gradio config UI — untouched.
@@ -26,8 +26,8 @@ Status: ALPHA
 - **Language Model**: Testing with some form of Qwen v3.
 - **Mantella**: It was made for the v0.14 version on [Github](https://github.com/art-from-the-machine/Mantella/releases), other versions will likely not work. The Mantella Mod for Fallout 4 is [here](https://www.nexusmods.com/fallout4/mods/79747).
 
-# Usage / Install
-1. Download the most recent version of [Mantella-Local](https://github.com/wiseman-timelord/Mantella-Local-Launcher/releases), and drag the, file(S) and folder(s), from the zip into the main Mantella folder.
+### Usage / Install
+1. Download the most recent version of [Mantella-LocalLlm](https://github.com/wiseman-timelord/Mantella-LocalLlm-Launcher/releases), and drag the, file(S) and folder(s), from the zip into the main Mantella folder.
 - Under Construction
   
 ### Notes
