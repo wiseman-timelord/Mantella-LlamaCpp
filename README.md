@@ -41,7 +41,7 @@ Quality: max_tokens = 200, max_response_sentences = 3, temperature = 0.6
 - Mantealla-Local v0.14+ has GPU selection, so if you have multiple GPUs ensure to correctly configure your second GPU (if thats optimal) in the configuration.
 - Mods like PhyOp performance texture pack, they will allow one to reduce texture memory footprint, enabling loading of models to GPU larger VRAM spaces on single card.
 
-### Structure
+### Dropin Structure
 ```
 .\Mantella-LocalLlm.bat - Batch launcher 
 .\main.py - Replacement entry point 
@@ -52,6 +52,25 @@ Quality: max_tokens = 200, max_response_sentences = 3, temperature = 0.6
 .\src\tts\tts_definitions.py - Modified (adds KOKORO enum) 
 .\src\tts\tts_factory.py - Modified (registers KokoroTTS) 
 ```
+
+### Files Finalization
+| New path | Replaces | What it does |
+| `launcher.py` | `main.py` | Entry point, starts HTTP server + UI |
+| `scripts/inference.py` | `src/local_inference.py` | Interactive launcher menu |
+| `scripts/utility.py` | `src/utils.py` | Core utilities, **telemetry stripped out** |
+| `scripts/kokoro.py` | `src/tts/kokoro_tts.py` | Kokoro TTS backend |
+| `scripts/speech.py` | `src/tts/tts_definitions.py` | TTS enum (KOKORO added) |
+| `scripts/displays.py` | `src/tts/tts_factory.py` | TTS factory (registers Kokoro) |
+| `scripts/profiler.py` | `src/model_profile_manager.py` | Model profile manager |
+| `scripts/selector.py` | `src/random_llm_selector.py` | Random LLM selector |
+| `scripts/manager.py` | `src/game_manager.py` | Game state manager |
+| `scripts/biotempl.py` | `src/bio_template_manager.py` | Bio template manager |
+| `scripts/charter.py` | `src/character_manager.py` | Character dataclass |
+| `scripts/charlist.py` | `src/characters_manager.py` | Characters collection |
+| `scripts/colors.py` | `src/color_formatter.py` | Logging colour formatter |
+| `scripts/cfgedit.py` | `src/config_editor.py` | Tkinter config editor |
+| `scripts/startapp.py` | `src/setup.py` | MantellaSetup (telemetry stubbed) |
+| `data/requirements.txt` | `requirements.txt` | Updated requirements |
 
 ### Early Development
 - Project restart, updating local launcher to become Mantalla-Local, this will be a Llama.cpp built-in streamlined/enhanced version, specific to Qwen 3 variants in GGUF, though other models may be added later, but not newer than Qwen 3 level/dated models (because otherwise this requires compiling the wheel, and other complication). 
