@@ -41,7 +41,7 @@ Quality: max_tokens = 200, max_response_sentences = 3, temperature = 0.6
 - Mantealla-Local v0.14+ has GPU selection, so if you have multiple GPUs ensure to correctly configure your second GPU (if thats optimal) in the configuration.
 - Mods like PhyOp performance texture pack, they will allow one to reduce texture memory footprint, enabling loading of models to GPU larger VRAM spaces on single card.
 
-### Dropin Structure
+### Phase 1 Structure
 ```
 .\Mantella-LocalLlm.bat - Batch launcher 
 .\main.py - Replacement entry point 
@@ -53,7 +53,7 @@ Quality: max_tokens = 200, max_response_sentences = 3, temperature = 0.6
 .\src\tts\tts_factory.py - Modified (registers KokoroTTS) 
 ```
 
-### Files Finalization
+### Phase 2 Structure
 ```
 | New path | Replaces | What it does |
 | `launcher.py` | `main.py` | Entry point, starts HTTP server + UI |
