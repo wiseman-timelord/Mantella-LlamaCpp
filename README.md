@@ -54,6 +54,7 @@ Quality: max_tokens = 200, max_response_sentences = 3, temperature = 0.6
 ```
 
 ### Files Finalization
+`
 | New path | Replaces | What it does |
 | `launcher.py` | `main.py` | Entry point, starts HTTP server + UI |
 | `scripts/inference.py` | `src/local_inference.py` | Interactive launcher menu |
@@ -71,6 +72,7 @@ Quality: max_tokens = 200, max_response_sentences = 3, temperature = 0.6
 | `scripts/cfgedit.py` | `src/config_editor.py` | Tkinter config editor |
 | `scripts/startapp.py` | `src/setup.py` | MantellaSetup (telemetry stubbed) |
 | `data/requirements.txt` | `requirements.txt` | Updated requirements |
+`
 
 ### Early Development
 - Project restart, updating local launcher to become Mantalla-Local, this will be a Llama.cpp built-in streamlined/enhanced version, specific to Qwen 3 variants in GGUF, though other models may be added later, but not newer than Qwen 3 level/dated models (because otherwise this requires compiling the wheel, and other complication). 
