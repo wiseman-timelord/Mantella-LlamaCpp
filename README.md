@@ -1,4 +1,4 @@
-# Mantella-Llame.Cpp for [Mantella](https://github.com/art-from-the-machine/Mantella/releases) v0.14
+# Mantella-Llama.Cpp for [Mantella](https://github.com/art-from-the-machine/Mantella/releases) v0.14
 Status: ALPHA 
 - Remaking for `Mantella 0.14`. (older versions exist in tags for earlier versions of mantella)
 
