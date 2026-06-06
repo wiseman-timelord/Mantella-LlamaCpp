@@ -1,6 +1,7 @@
 # Mantella-LlamaCpp for [Mantella](https://github.com/art-from-the-machine/Mantella/releases) v0.14
 Status: ALPHA 
 - Remaking for `Mantella 0.14`. (older versions exist in tags for earlier versions of mantella)
+- This work is unable to be done due to finance issues, and so is on hold currently, there are methods of donating/supporting, people dont seem to do that, so I struggle.
 
 ### Descriptioon
 **Mantella-LocalLlm v0.14.x** is a drop-in augmentation of Mantella v0.14, targeting Fallout 4 only, with local-only LLM and TTS — no cloud APIs, no external model servers required. While older versions exist in the tags, that are more true to mantella, the version for v0.14 will be highly experimental, where the voices are done compoletely differently, and may not sound much like the original. The concept is to enable a simpler version of TTS, enabling requirement of only, Mantella mod AND Mantella v0.14 and then dropping in the scripts from Manatella-Local. So no requirements for XVASynth, Model Server, etc, instead we are using Kokoro, which will also result in much faster speech generation, and Llama.Cpp for integrated model handling.
